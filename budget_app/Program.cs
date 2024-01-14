@@ -12,7 +12,7 @@
 //Console.WriteLine($"Leftover: {moneyLeft}");
 
 // Declare variables and then initialize to zero.
-double num1 = 0; double num2 = 0;
+double num1 = 0; double num2 = 0; double num3 = 0;
 
 // Display title as the C# console calculator app.
 Console.WriteLine("Console Calculator in C#\r");
@@ -26,6 +26,10 @@ num1 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Enter Monthly Mortgage");
 num2 = Convert.ToDouble(Console.ReadLine());
 
+// Ask the user to type the second number.
+Console.WriteLine("Enter Monthly Investing");
+num3 = Convert.ToDouble(Console.ReadLine());
+
 // Ask the user to choose an option.
 Console.WriteLine("Choose an option from the following list:");
 Console.WriteLine("\ta - Add");
@@ -38,16 +42,16 @@ Console.Write("Your option? ");
 switch (Console.ReadLine())
 {
     case "a":
-        Console.WriteLine($"Monthly Disposable Income: {num1} + {num2} = " + (num1 + num2));
+        Console.WriteLine($"Monthly Disposable Income: {num1} + {num2} + {num3} = " + (num1 + num2 + num3));
         break;
     case "s":
-        Console.WriteLine($"Monthly Disposable Income: {num1} - {num2} = " + (num1 - num2));
+        Console.WriteLine($"Monthly Disposable Income: {num1} - {num2} - {num3} = " + (num1 - num2 - num3));
         break;
     case "m":
-        Console.WriteLine($"Monthly Disposable Income: {num1} * {num2} = " + (num1 * num2));
+        Console.WriteLine($"Monthly Disposable Income: {num1} * {num2} * {num3} = " + (num1 * num2 * num3));
         break;
     case "d":
-        Console.WriteLine($"Monthly Disposable Income: {num1} / {num2} = " + (num1 / num2));
+        Console.WriteLine($"Monthly Disposable Income: {num1} / {num2} / {num3} = " + (num1 / num2 / num3));
         break;
 }
 // Wait for the user to respond before closing.
