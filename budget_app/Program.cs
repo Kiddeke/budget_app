@@ -13,6 +13,7 @@
 
 // Declare variables and then initialize to zero.
 double num1 = 0; double num2 = 0; double num3 = 0;
+var num1Value = "Expense"; var num2Value = "Expense"; var num3Value = "Expense"; var num4Value = "Expense";
 
 // Display title as the C# console calculator app.
 Console.WriteLine("Console Calculator in C#\r");
@@ -21,6 +22,9 @@ Console.WriteLine("------------------------\n");
 // Ask the user to type the first number.
 Console.WriteLine("Enter Monthly Income");
 num1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Enter Type (Income or Expense)");
+num1Value = Convert.ToString(Console.ReadLine());
+
 
 // Ask the user to type the second number.
 Console.WriteLine("Enter Monthly Mortgage");
@@ -55,5 +59,7 @@ switch (Console.ReadLine())
         break;
 }
 // Wait for the user to respond before closing.
+Console.WriteLine(num1Value);
+
 Console.Write("Press any key to close the Calculator console app...");
 Console.ReadKey();
