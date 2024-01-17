@@ -55,7 +55,18 @@ switch (Console.ReadLine())
         Console.WriteLine($"Monthly Disposable Income: {num1} * {num2} * {num3} = " + (num1 * num2 * num3));
         break;
     case "d":
-        Console.WriteLine($"Monthly Disposable Income: {num1} / {num2} / {num3} = " + (num1 / num2 / num3));
+        // Ask the user to enter a non-zero divisor until they do so.
+        while (num2 == 0)
+        {
+            Console.WriteLine("Enter a non-zero divisor: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+        }
+        while (num3 ==0)
+        {
+            Console.WriteLine("Enter a non-zero divisor: ");
+            num3 = Convert.ToInt32(Console.ReadLine());
+        }
+        Console.WriteLine($"Your result: {num1} / {num2} / {num3}= " + (num1 / num2 / num3));
         break;
 }
 // Wait for the user to respond before closing.
