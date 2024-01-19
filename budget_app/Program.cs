@@ -1,6 +1,6 @@
 using CalculatorLibrary;
 
-class Program
+class CalculatorProgram
 {
     static void Main(string[] args)
     {
